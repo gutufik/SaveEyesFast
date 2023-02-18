@@ -135,10 +135,17 @@
     <Compile Include="Data\sysdiagram.cs">
       <DependentUpon>SaveEyesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AgentWindow.xaml.cs">
+      <DependentUpon>AgentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ChangePriorityWindow.xaml.cs">
       <DependentUpon>ChangePriorityWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\AgentsListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AgentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

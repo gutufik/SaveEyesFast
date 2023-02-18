@@ -159,7 +159,9 @@ namespace SaveEyesFast.Windows
 
         private void lvAgents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            var agent = (lvAgents.SelectedItem as Agent);
+            if (agent != null)
+                new AgentWindow(agent).ShowDialog();
         }
     }
 }
