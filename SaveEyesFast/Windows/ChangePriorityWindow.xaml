@@ -1,0 +1,25 @@
+﻿<Window x:Class="SaveEyesFast.Windows.ChangePriorityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SaveEyesFast.Windows"
+        mc:Ignorable="d"
+        Title="Изменить приоритет" Height="120" Width="300"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="tbPriority" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnChange" Content="Изменить" Grid.Row="1" Click="btnChange_Click"/>
+        <Button x:Name="btnCancel" Content="Отмена" Grid.Row="1" Grid.Column="1" Click="btnCancel_Click"/>
+
+    </Grid>
+</Window>
