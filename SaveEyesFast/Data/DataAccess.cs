@@ -37,6 +37,11 @@ namespace SaveEyesFast.Data
             RefreshList?.Invoke();
         }
 
-        
+        internal static void DeleteAgent(Agent agent)
+        {
+            SaveEyes2Entities.GetContext().Agents.Remove(agent);
+            SaveEyes2Entities.GetContext().SaveChanges();
+            RefreshList?.Invoke();
+        }
     }
 }

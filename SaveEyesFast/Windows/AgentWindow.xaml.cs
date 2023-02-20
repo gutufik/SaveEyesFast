@@ -47,17 +47,24 @@ namespace SaveEyesFast.Windows
 
         private void cbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var product = cbProduct.SelectedItem as Product;
+            Agent.ProductSales.Add(new ProductSale { Agent = Agent, Product = product, ProductCount = 1});
+            lvHistory.Items.Refresh();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (MessageBox.Show("Удалить?","",MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                DataAccess.DeleteAgent(Agent);
+                Close();
+            }
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
+            DataAccess.SaveAgent(Agent);
+            Close();
         }
     }
 }
